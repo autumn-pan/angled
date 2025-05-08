@@ -12,11 +12,6 @@ class Matrix
         Matrix* transpose();
         Matrix* inverse();
         Matrix* scale();
-        double* minor(int row, int col);
-        double* cofactor(int row, int col);
-        Matrix* cofactor();
-        Matrix* adjoint();
-
         int determinant();
 
     protected:

@@ -11,4 +11,4 @@ class Quaternion
         float q4;
 };
 
-#endif QUATERNION_H
+#endif
