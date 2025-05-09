@@ -8,11 +8,21 @@ class Quaternion
         Quaternion* sub(Quaternion * q);
         Quaternion* mult(Quaternion * q);
         Quaternion* mult(float scalar);
+
+        Quaternion* inverse();
+        Quaternion* normalize();
+
+
+        Quaternion* rotate(float roll, float pitch, float yaw, float x, float y, float z);
+
     protected:
         float q1;
         float q2;
         float q3;
         float q4;
 };
+
+Quaternion* pointToQuaternion(float x, float y, float z);
+Quaternion* getRotationQuaternion(float roll, float pitch, float yaw);
 
 #endif
