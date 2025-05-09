@@ -11,7 +11,9 @@ class Euler
         void mult(Euler * e);
         void mult(float scalar);
 
-        
+        void addRoll(float roll);
+        void addPitch(float pitch);
+        void addYaw(float yaw);
     protected:
         float roll;
         float pitch;

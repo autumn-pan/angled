@@ -35,3 +35,16 @@ void Euler::mult(float scalar)
     this->yaw *= scalar;
 }
 
+void Euler::addRoll(float roll)
+{
+    this->roll += roll;
+}
+void Euler::addPitch(float pitch)
+{
+    this->pitch += pitch;
+}
+void Euler::addYaw(float yaw)
+{
+    this->yaw += yaw;
+}
+
