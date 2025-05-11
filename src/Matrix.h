@@ -1,5 +1,5 @@
-#ifndef MATRIX_HPP
-#define MATRIX_HPP
+#ifndef MATRIX_H
+#define MATRIX_H
 
 class Matrix
 {
@@ -14,7 +14,11 @@ class Matrix
         Matrix* scale();
         int determinant();
 
-    protected:
+        int getRows();
+        int getCols();
+        double ** getData();
+
+    private:
         int rows;
         int cols;
         double **data;

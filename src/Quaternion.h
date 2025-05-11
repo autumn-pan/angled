@@ -15,7 +15,11 @@ class Quaternion
 
         Quaternion* rotate(float roll, float pitch, float yaw, float x, float y, float z);
 
-    protected:
+        float getQ1();
+        float getQ2();
+        float getQ3();
+        float getQ4();
+    private:
         float q1;
         float q2;
         float q3;

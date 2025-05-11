@@ -14,7 +14,11 @@ class Euler
         void addRoll(float roll);
         void addPitch(float pitch);
         void addYaw(float yaw);
-    protected:
+
+        void getRoll();
+        void getPitch();
+        void getYaw();
+    private:
         float roll;
         float pitch;
         float yaw;

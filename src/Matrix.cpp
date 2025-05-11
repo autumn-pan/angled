@@ -1,4 +1,4 @@
-#include "Matrix.hpp"
+#include "Matrix.h"
 
 Matrix::Matrix(double **data)
 {
@@ -122,3 +122,15 @@ Matrix* generateIdenitityMatrix(int size)
     return new Matrix(data);
 }
 
+int Matrix::getRows()
+{
+    return this->rows;
+}
+int Matrix::getCols()
+{
+    return this->cols;
+}
+double ** Matrix::getData()
+{
+    return this->data;
+}

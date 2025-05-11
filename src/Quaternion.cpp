@@ -83,3 +83,20 @@ Quaternion* Quaternion::rotate(float roll, float pitch, float yaw, float x, floa
     delete p;
     return result;
 }
+
+float Quaternion::getQ1()
+{
+    return this->q1;
+}
+float Quaternion::getQ2()
+{
+    return this->q2;
+}
+float Quaternion::getQ3()
+{
+    return this->q3;
+}
+float Quaternion::getQ4()
+{
+    return this->q4;
+}
