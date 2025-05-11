@@ -3,30 +3,31 @@
 class Quaternion
 {
     public:
-        Quaternion(float q1, float q2, float q3, float q4);
+        Quaternion(double q1, double q2, double q3, double q4);
         Quaternion* add(Quaternion * q);
         Quaternion* sub(Quaternion * q);
         Quaternion* mult(Quaternion * q);
-        Quaternion* mult(float scalar);
+        Quaternion* mult(double scalar);
 
         Quaternion* inverse();
         Quaternion* normalize();
 
 
-        Quaternion* rotate(float roll, float pitch, float yaw, float x, float y, float z);
+        Quaternion* rotate(double roll, double pitch, double yaw, double x, double y, double z);
 
-        float getQ1();
-        float getQ2();
-        float getQ3();
-        float getQ4();
+        double getQ1();
+        double getQ2();
+        double getQ3();
+        double getQ4();
+        
     private:
-        float q1;
-        float q2;
-        float q3;
-        float q4;
+        double q1;
+        double q2;
+        double q3;
+        double q4;
 };
 
-Quaternion* pointToQuaternion(float x, float y, float z);
-Quaternion* getRotationQuaternion(float roll, float pitch, float yaw);
+Quaternion* pointToQuaternion(double x, double y, double z);
+Quaternion* getRotationQuaternion(double roll, double pitch, double yaw);
 
 #endif
