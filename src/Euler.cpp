@@ -1,50 +1,57 @@
 #include "Euler.h"
 
-Euler::Euler(float roll, float pitch, float yaw)
+Euler::Euler(double roll, double pitch, double yaw)
 {
     this->roll = roll;
     this->pitch = pitch;
     this->yaw = yaw;
 }
 
-void Euler::add(Euler * e)
+Euler* Euler::add(Euler *e)
 {
-    this->roll += e->roll;
-    this->pitch += e->pitch;
-    this->yaw += e->yaw;
+    return new Euler(this->roll + e->roll, this->pitch + e->pitch, this->yaw + e->yaw);
 }
 
-void Euler::sub(Euler * e)
+Euler* Euler::sub(Euler *e)
 {
-    this->roll -= e->roll;
-    this->pitch -= e->pitch;
-    this->yaw -= e->yaw;
+    return new Euler(this->roll - e->roll, this->pitch - e->pitch, this->yaw - e->yaw);
 }
 
-void Euler::mult(Euler * e)
+Euler* Euler::mult(Euler *e)
 {
-    this->roll *= e->roll;
-    this->pitch *= e->pitch;
-    this->yaw *= e->yaw;
+    return new Euler(this->roll * e->roll, this->pitch * e->pitch, this->yaw * e->yaw);
 }
 
-void Euler::mult(float scalar)
+Euler* Euler::mult(double scalar)
 {
-    this->roll *= scalar;
-    this->pitch *= scalar;
-    this->yaw *= scalar;
+    return new Euler(this->roll * scalar, this->pitch * scalar, this->yaw * scalar);
 }
 
-void Euler::addRoll(float roll)
+void Euler::addRoll(double roll)
 {
     this->roll += roll;
 }
-void Euler::addPitch(float pitch)
+
+void Euler::addPitch(double pitch)
 {
     this->pitch += pitch;
 }
-void Euler::addYaw(float yaw)
+
+void Euler::addYaw(double yaw)
 {
     this->yaw += yaw;
 }
 
+double Euler::getRoll()
+{
+    return this->roll;
+}
+
+double Euler::getPitch()
+{
+    return this->pitch;
+}
+double Euler::getYaw()
+{
+    return this->yaw;
+}

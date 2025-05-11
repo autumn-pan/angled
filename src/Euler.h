@@ -4,23 +4,23 @@
 class Euler
 {
     public:
-        Euler(float roll, float pitch, float yaw);
+        Euler(double roll, double pitch, double yaw);
 
-        void add(Euler * e);
-        void sub(Euler * e);
-        void mult(Euler * e);
-        void mult(float scalar);
+        Euler* add(Euler * e);
+        Euler* sub(Euler * e);
+        Euler* mult(Euler * e);
+        Euler* mult(double scalar);
 
-        void addRoll(float roll);
-        void addPitch(float pitch);
-        void addYaw(float yaw);
+        void addRoll(double roll);
+        void addPitch(double pitch);
+        void addYaw(double yaw);
 
-        void getRoll();
-        void getPitch();
-        void getYaw();
+        double getRoll();
+        double getPitch();
+        double getYaw();
     private:
-        float roll;
-        float pitch;
-        float yaw;
+        double roll;
+        double pitch;
+        double yaw;
 };
 #endif
