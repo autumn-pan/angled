@@ -60,6 +60,35 @@ int main()
     delete q8;
     delete q9;
 
+    // Test Euler class
+    Euler e1(1, 2, 3);
+    Euler e2(4, 5, 6);
+    std::cout << "Euler Addition: " << std::endl;
+    Euler* e3 = e1.add(&e2);
+    std::cout << e3->getRoll() << " " << e3->getPitch() << " " << e3->getYaw() << std::endl;
+    std::cout << "Expected: 5 7 9" << std::endl;
+    std::cout << "Euler Subtraction: " << std::endl;
+    Euler* e4 = e1.sub(&e2);
+    std::cout << e4->getRoll() << " " << e4->getPitch() << " " << e4->getYaw() << std::endl;
+    std::cout << "Expected: -3 -3 -3" << std::endl;
+    std::cout << "Euler Multiplication: " << std::endl;
+    Euler* e5 = e1.mult(&e2);
+    std::cout << e5->getRoll() << " " << e5->getPitch() << " " << e5->getYaw() << std::endl;
+    std::cout << "Expected: 4 10 18" << std::endl;
+    std::cout << "Euler Scalar Multiplication: " << std::endl;
+    Euler* e6 = e1.mult(2);
+    std::cout << e6->getRoll() << " " << e6->getPitch() << " " << e6->getYaw() << std::endl;
+    std::cout << "Expected: 2 4 6" << std::endl;
+    e1.addRoll(1);
+    e1.addPitch(2);
+    e1.addYaw(3);
+    std::cout << "Euler Add Roll, Pitch, Yaw: " << std::endl;
+    std::cout << e1.getRoll() << " " << e1.getPitch() << " " << e1.getYaw() << std::endl;
+    std::cout << "Expected: 2 4 6" << std::endl;
 
+    delete e3;
+    delete e4;
+    delete e5;
+    delete e6;
     return 0;
 }
